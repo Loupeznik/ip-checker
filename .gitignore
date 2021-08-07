@@ -16,3 +16,7 @@ vendor/
 
 # Environment files
 .env
+
+# Build directory + binaries
+ip-checker
+build/
