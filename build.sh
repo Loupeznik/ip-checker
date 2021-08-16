@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 GOOS=linux GOARCH=amd64 go build -o build/ip-checker .
 cp .env ip.txt build
