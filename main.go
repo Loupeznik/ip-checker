@@ -111,5 +111,5 @@ func notifyBySlack(oldIp string, newIp string) {
 }
 
 func printMessage(oldIp string, newIp string) string {
-	return "The IP of a server originally at " + oldIp + " has changed to " + newIp + ". Update your DNS records."
+	return "The IP of a server - " + os.Getenv("HOSTNAME") + " - originally at " + oldIp + " has changed to " + newIp + ". Update your DNS records."
 }
