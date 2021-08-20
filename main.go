@@ -16,8 +16,8 @@ import (
 
 func main() {
 	if len(os.Args[1:]) == 0 {
-		log.Fatal("No command line arguments supplied")
 		fmt.Println("Usage: go run . --slack or go run . --email")
+		log.Fatal("No command line arguments supplied")
 	}
 
 	// Load dotenv
