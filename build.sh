@@ -12,9 +12,7 @@ for arch in "${archs[@]}"; do
   GOOS=linux GOARCH=$arch go build -o build/ip-checker-"$arch" .
 done
 
-# Build zip for the Lambda function
+# Copy environment variables and the current IP file to accompany the built binaries
 
-echo "Building Lambda function zip"
+echo "Moving files"
 cp .env ip.txt build
-zip -rjq build/ip-checker.zip build/ip-checker-amd64 build/.env build/ip.txt
-rm build/.env build/ip.txt
